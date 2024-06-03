@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRoter, RouterProvider, Link } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
 import Home from './Pages/Home/Home.jsx'
@@ -8,9 +9,9 @@ import Sobre from './Pages/Sobre/Sobre.jsx'
 import Login from './Pages/Login/Login.jsx'
 import Contato from './Pages/Contato/Contato.jsx'
 
-import './index.css'
+import './Scss/style.css'
 
-const router = createBrowserRoter([{
+const router = createBrowserRouter([{
   path: '/',
   element: <App />,
   children: [

@@ -11,6 +11,14 @@ function App() {
     {text: 'Login', link: '/login'},
     {text: 'Contato', link: '/contato'},
   ]
+  return(
+    <>
+      <Header menuItems={menuItems} />
+      <Outlet />
+      <Footer />
+      
+    </>
+  )
 }
 
 export default App
