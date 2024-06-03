@@ -6,7 +6,10 @@ $color-black: black;
 $color-coral: coral;
 $color-sand: rgba(250, 207, 154, 0.336);
 $color-blue: #4169e1;
+$color-orange-light: rgba(255, 166, 0, 0.664);
+
 $color-blue-light: #608dc9;
+$color-blue-lighter: rgb(223, 239, 253);
 
 * {
   @include mixins.pd-mg-default(0, 0);
@@ -53,7 +56,7 @@ header {
       // gap: 1rem;
       // @include mixins.mx(0.5rem, 0.5rem);
       // @include mixins.px(0.5rem, 0.5rem);
-      background-color: rgb(223, 239, 253);
+      background-color: $color-blue-lighter;
       border-radius: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
 
@@ -135,6 +138,7 @@ header {
         font-size: 1.5rem;
 
         color: $color-blue;
+        font-weight: 900;
         @include mixins.breakpoint(medium) {
           font-size: 1.3rem;
         }
@@ -145,6 +149,7 @@ header {
       p {
         font-size: 1rem;
         color: $color-blue;
+        font-weight: 500;
         @include mixins.breakpoint(medium) {
           font-size: 0.9rem;
         }
@@ -174,8 +179,10 @@ header {
       @include mixins.px(1rem, 0);
       .noticias-main {
         border-radius: 10px;
-        background-color: rgba(255, 166, 0, 0.664);
+        background-color: $color-orange-light;
         transition: transform 0.3s, box-shadow 0.3s;
+        margin: 0 auto;
+        
         &:hover {
           transform: translateY(-10px);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -184,9 +191,13 @@ header {
           font-size: 1.4rem;
         }
         .noticias-item {
-          @include mixins.py(1rem, 1rem);
+          @include mixins.py(1rem, 1.5rem);
           @include mixins.px(1rem, 1rem);
           @include mixins.my(0, 1rem);
+        //   width: 85%;
+          margin: 0 auto;
+          justify-content: center;
+          align-items: center;
           border-radius: 10px;
           text-align: justify;
           .noticias-image {
@@ -351,7 +362,7 @@ header {
       margin: 0 auto;
       .faq-item {
         column-gap: 1rem;
-        background-color: $color-blue-light;
+        background-color: $color-blue;
         @include mixins.py(3rem, 3rem);
         @include mixins.px(1.5rem, 1.5rem);
         border-radius: 10px;
@@ -367,32 +378,102 @@ header {
 .contato {
   width: 85%;
   margin: 0 auto;
+  @include mixins.py(1rem, 1rem);
   .contato-content {
-    //display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     gap: 1rem;
-    @include mixins.py(1rem, 1rem);
 
-    .contato-item {
+    .contato-card {
+      background-color: transparent;
+      border: none;
+      height: fit-content;
+      .contato-item {
+        @include mixins.py(1rem, 1rem);
+        // @include mixins.px(1.5rem, 1.5rem);
+        background-color: $color-orange;
+        gap: 1.5rem;
+        @include mixins.my(1rem, 1rem);
+        text-align: justify;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .contato-carousel {
+          @include mixins.px(3rem, 3rem);
+          @include mixins.py(2rem, 2rem);
+          .topic {
+            color: $color-blue-lighter;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .engajamento-comunitario-section {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    .volutariados {
       @include mixins.py(1rem, 1rem);
-      @include mixins.px(1.5rem, 1.5rem);
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1rem;
+      .volutariados-card {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: transparent;
+        @include mixins.py(1rem, 1rem);
+        border: none;
 
-      gap: 1.5rem;
-      background-color: white;
-      @include mixins.my(1rem, 1rem);
-      text-align: justify;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        .text {
+          text-align: justify;
+          @include mixins.py(1rem, 1rem);
+        }
+        img {
+          @include mixins.py(1rem, 1rem);
+          width: 100%;
+        }
+        .card-A {
+          background-color: $color-orange;
+          border-radius: 10px;
+          a {
+            background-color: $color-blue;
+          }
+        }
+        .card-B {
+            color: $color-white;
+          background-color: $color-blue;
+          border-radius: 10px;
+          a {
+            background-color: $color-orange;
+          }
+        }
+        a {
+          text-decoration: none;
+          padding: 1rem;
+          border-radius: 10px;
+          color: $color-white;
+        }
       }
-      .topic {
-        color: $color-orange;
-      }
+    }
+    .eventos-section{
+        background-color: $color-blue-light;
+        @include mixins.py(1rem, 1rem);
+        border-radius: 10px;
+        .eventos-item{
+            @include mixins.py(1rem, 1rem);
+            @include mixins.px(1rem, 1rem);
+            
+            width: 70%;
+            margin: 0 auto;
+        }
     }
   }
 }

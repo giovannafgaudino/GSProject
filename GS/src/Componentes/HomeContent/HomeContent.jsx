@@ -31,15 +31,16 @@ function HomeContent() {
                     <section className='noticias'>
                         <Carousel className='noticias-main'>
                             {news.noticias.map((noticia, index) => (
-                                <Carousel.Item interval={7000} key={index} className='noticias-item'>
-                                    <h3>{noticia.titulo}</h3>
-                                    <p className='text-muted'>{noticia.descricao}</p>
-                                    <div className='noticias-image'>
-                                        <img src={noticia.imagem} alt="" />
+                                <Carousel.Item interval={7000} key={index} >
+                                    <div className='noticias-item'>
+                                        <h3>{noticia.titulo}</h3>
+                                        <p className='text-muted'>{noticia.descricao}</p>
+                                        <div className='noticias-image'>
+                                            <img src={noticia.imagem} alt="" />
+                                        </div>
+                                        <p>{noticia.resumo}</p>
+                                        <p>{noticia.fonte}</p>
                                     </div>
-                                    <p>{noticia.resumo}</p>
-                                    <p>{noticia.fonte}</p>
-
                                 </Carousel.Item>
                             ))}
                         </Carousel>
