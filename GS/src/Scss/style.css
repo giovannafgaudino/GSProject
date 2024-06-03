@@ -280,7 +280,7 @@ header .Logo .title p {
   display: grid;
   width: 90%;
   margin: 0 auto;
-  background-color: orange;
+  background-color: #608dc9;
   padding: 1rem;
   border-radius: 10px;
   gap: 1rem;
@@ -304,14 +304,121 @@ header .Logo .title p {
   background-color: white;
 }
 .login section .login-content form button {
-  background-color: #608dc9;
+  background-color: orange;
   padding: 0.5rem;
 }
+.login section .login-content .btn-google {
+  width: 100%;
+  justify-content: center;
+  padding-left: 29%;
+  padding-right: 15%;
+}
 .login section .login-content .login-google {
-  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
+  background-color: white;
   justify-content: center;
   align-items: center;
   width: 101%;
+}
+.login section .login-content .login-google img {
+  border-radius: 10px;
+}
+
+.sobre {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.sobre .sobre-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.sobre .sobre-content div img {
+  width: 100%;
+  border-radius: 10px;
+}
+.sobre .sobre-content div p {
+  text-align: justify;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.sobre .sobre-content .circuito {
+  width: 100%;
+  padding-left: 25%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+}
+.sobre .sobre-content .circuito img {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+.sobre .faq {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.sobre .faq .faq-section {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+}
+.sobre .faq .faq-section .faq-item {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  background-color: #608dc9;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 10px;
+  text-align: justify;
+}
+.sobre .faq .faq-section .faq-item .faq-card {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contato {
+  width: 85%;
+  margin: 0 auto;
+}
+.contato .contato-content {
+  width: 100%;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.contato .contato-content .contato-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  background-color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.contato .contato-content .contato-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.contato .contato-content .contato-item .topic {
+  color: orange;
 }
 
 footer {

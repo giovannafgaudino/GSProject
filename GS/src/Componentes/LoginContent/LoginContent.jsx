@@ -70,9 +70,9 @@ function LoginContent() {
                                 <button type="submit"> Entrar</button>
                             </form>
                             <p>Ou</p>
-                            <div className='w-100'>
-                                <GoogleOAuthProvider className='login-google w-' clientId="446568977207-ld1dg6fn5htlhgn7itqh5m4hcnnscgd9.apps.googleusercontent.com">
-                                    <GoogleLogin
+                            <div className='btn-google'>
+                                <GoogleOAuthProvider className='btn-google' clientId="446568977207-ld1dg6fn5htlhgn7itqh5m4hcnnscgd9.apps.googleusercontent.com">
+                                    <GoogleLogin className='btn-google'
                                         onSuccess={handleLoginSuccess}
                                         onError={() => {
                                             console.log('Login Failed');
@@ -81,9 +81,9 @@ function LoginContent() {
                                 </GoogleOAuthProvider>
                             </div>
                         </div>
-                        <div>
+                        <div >
                             {userData && (
-                                <div>
+                                <div className='login-google'>
                                     <img className='border-rounded' src={userData.picture} alt='userData.name' />
                                     <h2>Bem-Vindo(a) {userData.name}</h2>
                                     <p>Login realizado com sucesso: {userData.email}</p>
