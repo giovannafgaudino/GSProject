@@ -44,10 +44,7 @@ function LoginContent() {
     return (
         <>
             <main className='login'>
-
                 <section>
-
-
                     <div className='login-content'>
                         <div>
                             <h3> Já possui uma conta? </h3>
@@ -58,13 +55,11 @@ function LoginContent() {
                                     name='email'
                                     id='email'
                                     placeholder='Entre com e-mail ou telefone'
-
                                     required />
                                 <input type="password"
                                     name="senha"
                                     id="senha"
                                     placeholder='Digite sua senha'
-
                                     required />
                                 <p>Esqueceu sua senha?</p>
                                 <button type="submit"> Entrar</button>
