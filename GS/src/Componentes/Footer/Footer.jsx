@@ -9,7 +9,7 @@ function Footer() {
         <>
             <footer>
                 <section className='footer'>
-                    <section className="parceiros-content">
+                    <div className="parceiros-content">
                         <div className='logo-parceiros'>
                             <img src={oceans20Logo} alt="" />
                         </div>
@@ -26,18 +26,19 @@ function Footer() {
                             <img src={softtek} alt="" />
                         </div>
                         <div className='logo-parceiros'>
-                            <img src={unGlobal} alt="" className='w-6'/>
+                            <img src={unGlobal} alt="" className='w-6' />
                         </div>
-                    </section>
-                    <section className='equipe'>
+                    </div>
+                    <div className='equipe'>
 
                         <a href="https://www.linkedin.com/in/becinaayu" className="">Beaztriz Dantas Sampaio</a>
                         <a href="https://www.linkedin.com/in/gifranco/" className="">Giovanna Franco G. Rodrigues</a>
                         <a href="https://www.linkedin.com/in/isabela-barcellos-freire-91263328a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " className="">Isabela Barcellos Freire</a>
-                    </section>
-                    <section>
+
+                    </div>
+                    <div>
                         <p>COPYRIGHT © 2024 </p>
-                    </section>
+                    </div>
                 </section>
             </footer>
         </>

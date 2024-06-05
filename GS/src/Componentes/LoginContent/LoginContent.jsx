@@ -87,7 +87,6 @@ function LoginContent() {
                                     <img className='border-rounded' src={userData.picture} alt='userData.name' />
                                     <h2>Bem-Vindo(a) {userData.name}</h2>
                                     <p>Login realizado com sucesso: {userData.email}</p>
-
                                 </div>
                             )}
                         </div>
