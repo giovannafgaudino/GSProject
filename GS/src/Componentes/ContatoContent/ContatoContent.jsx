@@ -8,7 +8,7 @@ function ContatoContent() {
             <main className='contato'>
                 <section className='contato-infos' >
                     <div className='contato-content'>
-                        {infos.sobre.map((i, index) => (
+                        {infos.contato.map((i, index) => (
                             <Card className='contato-card'>
                                 <Card.Body key={index} className='contato-item'>
                                     <h3>{i.title} </h3>
